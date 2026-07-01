@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trade Executor"
+  short_description: "Plan and verify guarded trade execution"
+  default_prompt: "Use $trade-executor to prepare a dry-run trade execution plan with risk checks and confirmation gates."

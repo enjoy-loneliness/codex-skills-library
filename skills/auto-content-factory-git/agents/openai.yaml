@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Git"
+  short_description: "Use conventional commits and PRs"
+  default_prompt: "Use $auto-content-factory-git to prepare a conventional commit or PR summary."
+
+policy:
+  allow_implicit_invocation: true

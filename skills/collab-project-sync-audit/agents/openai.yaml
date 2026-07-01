@@ -1,0 +1,4 @@
+interface:
+  display_name: "Collab Sync Audit"
+  short_description: "Pre-change sync and deployment audit for shared repos"
+  default_prompt: "Use $collab-project-sync-audit before changing this shared project."

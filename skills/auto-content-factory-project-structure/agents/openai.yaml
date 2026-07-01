@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Project Structure"
+  short_description: "Keep content factory files organized"
+  default_prompt: "Use $auto-content-factory-project-structure to organize an Auto Content Factory repository."
+
+policy:
+  allow_implicit_invocation: true

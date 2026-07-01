@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory AI Agent"
+  short_description: "Design single-purpose agent chains"
+  default_prompt: "Use $auto-content-factory-ai-agent to design an agentized Auto Content Factory workflow."
+
+policy:
+  allow_implicit_invocation: true

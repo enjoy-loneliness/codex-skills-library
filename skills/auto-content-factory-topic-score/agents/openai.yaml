@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Topic Score"
+  short_description: "Score content topics for publishing"
+  default_prompt: "Use $auto-content-factory-topic-score to score a content topic for publishing priority."
+
+policy:
+  allow_implicit_invocation: true

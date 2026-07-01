@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Workflow Logging"
+  short_description: "Enforce append-only workflow logs"
+  default_prompt: "Use $auto-content-factory-workflow-logging to design logging for an Auto Content Factory workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Review"
+  short_description: "Review delivery against all factory rules"
+  default_prompt: "Use $auto-content-factory-review to review an Auto Content Factory change before delivery."
+
+policy:
+  allow_implicit_invocation: true

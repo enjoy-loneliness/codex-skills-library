@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Publish"
+  short_description: "Plan platform-specific publishing flows"
+  default_prompt: "Use $auto-content-factory-publish to plan platform-specific publishing for a content draft."
+
+policy:
+  allow_implicit_invocation: true

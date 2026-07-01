@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Testing"
+  short_description: "Require tests before workflow launch"
+  default_prompt: "Use $auto-content-factory-testing to design tests for an Auto Content Factory module or workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Analytics"
+  short_description: "Analyze content performance and memory"
+  default_prompt: "Use $auto-content-factory-analytics to analyze content performance and update AI Memory."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Security"
+  short_description: "Protect keys webhooks logs and requests"
+  default_prompt: "Use $auto-content-factory-security to review secrets, webhooks, logs, and external requests."
+
+policy:
+  allow_implicit_invocation: true

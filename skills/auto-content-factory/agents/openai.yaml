@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory"
+  short_description: "规划公众号自动采集选题成稿审核发布和数据反馈流水线"
+  default_prompt: "Use $auto-content-factory to plan and build an automated WeChat content production workflow."
+
+policy:
+  allow_implicit_invocation: true

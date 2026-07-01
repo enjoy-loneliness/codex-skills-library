@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+*.log
+
+# Local scratch files
+.tmp/
+tmp/
+
+# Codex/runtime caches
+.cache/
+__pycache__/
+*.pyc

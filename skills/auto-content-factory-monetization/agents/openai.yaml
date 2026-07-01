@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Monetization"
+  short_description: "Plan monetization paths for content"
+  default_prompt: "Use $auto-content-factory-monetization to evaluate monetization paths for a content idea."
+
+policy:
+  allow_implicit_invocation: true

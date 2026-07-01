@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Database"
+  short_description: "Design Notion schemas for content factory"
+  default_prompt: "Use $auto-content-factory-database to design the Auto Content Factory database schema."
+
+policy:
+  allow_implicit_invocation: true

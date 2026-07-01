@@ -1,0 +1,4 @@
+interface:
+  display_name: "TVBox Automation"
+  short_description: "Maintain TVBox/影视仓 n8n source health and Cloudflare KV configs"
+  default_prompt: "Use $tvbox-automation to work on the TVBox n8n source updater, health checks, multi-source configs, and Cloudflare KV publishing."

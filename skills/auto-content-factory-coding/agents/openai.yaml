@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Coding"
+  short_description: "Keep content factory code simple and safe"
+  default_prompt: "Use $auto-content-factory-coding to implement maintainable Auto Content Factory code."
+
+policy:
+  allow_implicit_invocation: true

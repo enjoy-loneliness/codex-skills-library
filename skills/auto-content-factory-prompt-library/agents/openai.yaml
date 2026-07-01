@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Prompt Library"
+  short_description: "Version reusable JSON prompts for content factory"
+  default_prompt: "Use $auto-content-factory-prompt-library to design a versioned prompt for the content factory."
+
+policy:
+  allow_implicit_invocation: true

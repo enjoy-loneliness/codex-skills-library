@@ -1,0 +1,4 @@
+interface:
+  display_name: "UniApp Project Builder"
+  short_description: "初始化 Vue 3 uni-app 多端项目骨架"
+  default_prompt: "Use $uniapp-project-builder to initialize a Vue 3 uni-app mini program, H5 website, or multi-platform project."

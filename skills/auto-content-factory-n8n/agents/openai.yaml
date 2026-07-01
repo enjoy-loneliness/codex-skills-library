@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory n8n"
+  short_description: "Generate modular n8n content workflows"
+  default_prompt: "Use $auto-content-factory-n8n to design a modular n8n workflow for the content factory."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auto Content Factory Article"
+  short_description: "Write practical WeChat tool articles"
+  default_prompt: "Use $auto-content-factory-article to write a practical WeChat article for 科技&Tools乐园."
+
+policy:
+  allow_implicit_invocation: true

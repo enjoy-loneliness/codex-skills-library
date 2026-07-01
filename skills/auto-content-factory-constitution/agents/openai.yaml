@@ -1,0 +1,7 @@
+interface:
+  display_name: "ACF Skill 0 Constitution"
+  short_description: "Highest-priority rules for all ACF work"
+  default_prompt: "Use $auto-content-factory-constitution as the highest-priority rules for Auto Content Factory work."
+
+policy:
+  allow_implicit_invocation: true
