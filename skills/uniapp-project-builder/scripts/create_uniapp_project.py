@@ -36,7 +36,7 @@ def write_json(path: Path, data: dict) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def ensure_empty_or_force(target: Path, force: bool) -> None:
+def ensure_empty_or_force(target: Path, force: bool, creation_parent: Path | None = None) -> None:
     if target.exists() and any(target.iterdir()):
         if not force:
             raise SystemExit(
@@ -46,9 +46,23 @@ def ensure_empty_or_force(target: Path, force: bool) -> None:
 
         resolved_home = Path.home().resolve()
         resolved_cwd = Path.cwd().resolve()
+        resolved_creation_parent = (creation_parent or resolved_cwd).resolve()
         forbidden_targets = {Path(target.anchor).resolve(), resolved_home, resolved_cwd}
         if target in forbidden_targets or target in resolved_cwd.parents:
             raise SystemExit(f"Refusing to replace a broad or protected directory: {target}")
+
+        forbidden_creation_parents = {Path(target.anchor).resolve(), resolved_home}
+        if resolved_creation_parent in forbidden_creation_parents:
+            raise SystemExit(
+                f"Refusing to use a broad or protected creation parent: {resolved_creation_parent}"
+            )
+        if not target.is_relative_to(resolved_creation_parent):
+            raise SystemExit(
+                f"Refusing to replace a target outside the creation parent: {target}\n"
+                f"Creation parent: {resolved_creation_parent}"
+            )
+        if (target / ".git").exists():
+            raise SystemExit(f"Refusing to replace a Git repository root: {target}")
 
         project_markers = (
             target / "package.json",
@@ -60,6 +74,7 @@ def ensure_empty_or_force(target: Path, force: bool) -> None:
                 f"Refusing to replace an unmarked directory: {target}\n"
                 "Expected package.json, manifest.json, and pages.json from an existing starter."
             )
+        print(f"Replacing existing generated project at {target}")
         shutil.rmtree(target)
     target.mkdir(parents=True, exist_ok=True)
 
@@ -600,7 +615,7 @@ const request = options => {
   const appStore = useAppStore();
   const upperMethod = method.toUpperCase();
   const finalParams = upperMethod === 'GET' ? { ...params, ...data } : params;
-  const isAbsoluteUrl = /^https?:\/\//i.test(url);
+  const isAbsoluteUrl = /^https?:\\/\\//i.test(url);
   let queryUrl = isAbsoluteUrl ? url : `${BASE_URL}${url}`;
   const authHeader = {};
   if (!noAuth && !isAbsoluteUrl && appStore.token) {
@@ -1029,7 +1044,7 @@ def jsconfig_json() -> dict:
 
 def write_project(args: argparse.Namespace) -> None:
     target = args.target.resolve()
-    ensure_empty_or_force(target, args.force)
+    ensure_empty_or_force(target, args.force, args.creation_parent)
 
     project_name = normalize_package_name(args.name or target.name)
     args.title = args.title or pascal_title(project_name)
@@ -1098,6 +1113,12 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         "--force",
         action="store_true",
         help="Replace a non-empty target only when it contains existing uni-app starter markers.",
+    )
+    parser.add_argument(
+        "--creation-parent",
+        type=Path,
+        default=Path.cwd(),
+        help="Parent boundary for --force replacement. Defaults to the current working directory.",
     )
     parser.add_argument("--no-uview", action="store_true", help="Do not include uview-plus.")
     return parser.parse_args(argv)

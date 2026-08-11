@@ -22,8 +22,11 @@ Use `--type web` for H5 websites and `--type multi` for cross-platform projects.
 `--appid`, `--mp-weixin-appid`, `--port`, or `--no-uview` only when useful.
 
 `--force` is destructive. Use it only after showing the user the resolved target and confirming that
-it is the intended existing generated project. The script refuses filesystem/home/workspace roots and
-non-empty directories that do not contain `package.json`, `manifest.json`, and `pages.json`.
+it is the intended existing generated project. By default, replacement is limited to the current
+working directory. When the target lives elsewhere, pass its narrow parent explicitly with
+`--creation-parent <parent-dir>`. The script refuses filesystem/home/workspace or Git repository
+roots, targets outside that parent, and non-empty directories that do not contain `package.json`,
+`manifest.json`, and `pages.json`.
 
 ## What The Script Generates
 
