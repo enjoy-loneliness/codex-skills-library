@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-prompt-library
-description: Design, create, review, and version reusable prompts for the Auto Content Factory Prompt Library. Use when writing prompts for AI topic scoring, article generation, JSON extraction, AI repair, summarization, rewriting, review, analytics feedback, prompt schemas, prompt versioning, Notion Prompt Library records, or enforcing strict JSON-only AI outputs.
+description: 用于编写和版本化 ACF 可复用提示词及结构化输出契约。
 ---
 
 # Auto Content Factory Prompt Library

@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-coding
-description: Implement and review maintainable code for Auto Content Factory. Use when writing services, scripts, n8n Code nodes, integrations, tests, configuration, environment handling, modules, functions, naming, secrets handling, or refactoring content factory code for simplicity, modularity, maintainability, and testability.
+description: 用于实现或评审 ACF 服务、脚本及集成代码，保持已有模块职责。
 ---
 
 # Auto Content Factory Coding
@@ -73,7 +73,7 @@ Secrets include:
 
 Use `.env` for local secrets and keep `.env` ignored by Git. Provide `.env.example` with placeholder values only.
 
-## Output Requirements
+## Applicable Output
 
 When implementing or reviewing code, report:
 

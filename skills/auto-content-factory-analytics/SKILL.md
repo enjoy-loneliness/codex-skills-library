@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-analytics
-description: Collect, analyze, report, and learn from Auto Content Factory performance data. Use when tracking daily reads, likes, comments, saves, followers, revenue, publish time, platform, tags, titles, weekly reports, monthly insights, best-performing topics, title patterns, publish timing, stop-writing recommendations, or AI Memory updates.
+description: 用于 ACF 已发布内容的效果统计、来源核对与周期复盘。
 ---
 
 # Auto Content Factory Analytics

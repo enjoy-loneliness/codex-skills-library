@@ -1,6 +1,6 @@
 ---
 name: uniapp-project-builder
-description: Initialize Vue 3 uni-app projects for H5 websites, WeChat mini programs, or multi-platform apps. Use when the user says 用 uniapp 开发网站, 开发小程序, 微信小程序, H5, 多端开发, 跨端开发, or asks Codex to scaffold/init a uni-app project with folders, pages.json, manifest.json, Vite config, Pinia, request utilities, and base directories.
+description: 按请求初始化 Vue 3 uni-app 的 H5、小程序或多端项目，保留既有文件和目录边界。
 ---
 
 # UniApp Project Builder

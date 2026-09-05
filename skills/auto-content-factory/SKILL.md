@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory
-description: Plan, design, build, and operate the Auto Content Factory automated publishing system. Use when working on monetizable content pipelines for WeChat Official Account "科技&Tools乐园" and later Zhihu, Juejin, CSDN, or Xiaohongshu, involving RSS, GitHub Trending, Hacker News, Product Hunt, official blogs, AI topic scoring, AI writing, Telegram or Notion review, publishing queues, analytics feedback, and continuous optimization.
+description: 用于 ACF 文章生产与分发系统任务，按业务模块选择已有技能并遵守现行仓库边界。
 ---
 
 # Auto Content Factory
@@ -13,7 +13,7 @@ The only product goal is to build a profitable automated publishing system, not 
 
 ## Constitution Priority
 
-Treat `auto-content-factory-constitution` as Skill 0 and the highest-priority Auto Content Factory rule set. If this skill conflicts with the constitution, follow the constitution.
+Use `auto-content-factory-constitution` for ACF scope decisions. Current user instructions and repository ADR/AGENTS take precedence; load only the domain skills needed for this task.
 
 Current main project:
 

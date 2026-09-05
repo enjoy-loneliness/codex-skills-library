@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-optimization
-description: Optimize Auto Content Factory workflows for cost and efficiency. Use when reducing token usage, API calls, workflow count, full scans, duplicate processing, RSS or GitHub fetches, prompt loading, AI result recomputation, cache strategy, incremental updates, batching, reuse, or performance of content automation.
+description: 用于诊断 ACF 的实际调用、成本或性能瓶颈并做针对性优化。
 ---
 
 # Auto Content Factory Optimization
@@ -58,7 +58,7 @@ Prefer incremental updates:
 - Resume from checkpoints.
 - Use `updated_at`, source cursor, hash, or run logs to avoid full scans.
 
-## Output Requirements
+## Applicable Output
 
 When optimizing a workflow, output:
 

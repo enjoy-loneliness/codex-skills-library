@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-publish
-description: Plan and operate platform-specific publishing for Auto Content Factory. Use when preparing WeChat Official Account publishing, Zhihu, Juejin, CSDN, Xiaohongshu distribution, platform-specific publishers, titles, tags, covers, CTAs, prompts, retry queues, Telegram failure notifications, or multi-platform automated publishing workflows.
+description: 用于 ACF 稿件的平台适配和已授权发布交接，保留实际发布边界。
 ---
 
 # Auto Content Factory Publish

@@ -1,68 +1,36 @@
 ---
 name: collab-project-sync-audit
-description: Pre-change synchronization and deployment audit workflow for any shared or multi-person repository. Use before modifying, deploying, debugging, or reviewing projects where multiple collaborators may push to the same branch, especially when the user says to pull latest first, mentions多人协作, same-branch collaboration, server deployment drift, or asks whether local/remote/production are in sync.
+description: 用于共享仓库的开工同步、阻塞诊断和版本交付核对；定位当前任务文件，保留他人改动。
 ---
 
-# Collab Project Sync Audit
+# 仓库同步与可验证交付
 
-Use this skill before making changes in a shared project. Its job is to prevent stale-code edits, accidental overwrites, and deployment drift.
+## 何时使用
 
-## Core Rule
+用户要求先同步、协作检查、继续到部署，或已有任务因环境/并发改动中断时使用。规则沿用当前用户和仓库授权，不重建审批流程。
 
-Do not edit first. Inspect, sync, and report the baseline first. If any step fails, resolve or clearly report the blocker before changing files.
+## 开工预检
 
-## Pre-Change Workflow
+先确认实际 Git 根及本任务文件，运行只读脚本：
 
-1. Identify the repository roots involved in the request.
-   - Start from the current working directory.
-   - If the task mentions frontend/backend, monorepo packages, workers, mobile apps, or server deploys, locate each related repo before editing.
-   - Ignore unrelated services unless the user explicitly expands scope.
+```bash
+python3 <本技能目录>/scripts/workflow_preflight.py --repo <绝对仓库路径> --file <任务相对文件> --required <关键文件>
+```
 
-2. Check local state for every affected repo.
-   - Run `git status --short`.
-   - Run `git rev-parse --abbrev-ref HEAD` and `git remote -v` when the branch or remote is unclear.
-   - If the worktree has user changes, do not overwrite them. Work around them or ask if they block the task.
+脚本检查分支、缓存的 upstream 分歧、脏文件与任务文件重叠、缺失文件、UI 栈及 Python/Docker 版本；不读取凭据、不联网、不改 Git。缓存比较不代表刚同步，修改前仍执行 `git pull --ff-only`。
 
-3. Pull latest safely before edits.
-   - Prefer `git pull --ff-only origin <branch>`.
-   - If sandbox permissions block `.git/FETCH_HEAD`, rerun with approval rather than skipping the pull.
-   - If fast-forward fails, stop and report the divergence; do not create merge commits unless the user asks.
+无关脏文件保留并绕开；同文件冲突、未知暂存内容或非 fast-forward 时暂停受影响部分。不要 reset/stash 或猜测改动归属。检查外部协作者仍在修改时，优先用干净 worktree/明确补丁验证。
 
-4. Compare local, remote, and deployment when deployment matters.
-   - Record local HEAD after pulling.
-   - For servers, check whether the deployed directory is a git repo. If it is, verify `git status --short`, HEAD, remote, branch, and `git pull --ff-only` capability.
-   - If the deployed directory is not a git repo, report that deployment cannot be updated by normal pull until it is initialized or replaced by a clone.
-   - Check process/container status and health endpoints only for the services in scope.
+## 持续执行
 
-5. Only after the baseline is clean, make code changes.
-   - Keep changes scoped to the request.
-   - Build/test the affected repos.
-   - Commit and push only when the user has allowed that project to be pushed automatically.
+- 测试环境优先匹配项目声明、CI 与生产版本；版本不符先修复环境，不改无关业务代码来迁就旧 Python。
+- 已授权的局部失败可自主修复重测。测试连接断开、登录失效、依赖审计失败、权限不足分别记录，不能统一归为产品失败或成功。
+- 每个部署动作只允许一个进行中的执行实例；已有调用未结束先等待/查状态，不再启动相同 Compose、发布或迁移命令。
+- 版本化静态产物部署不要求服务器一定有 Git checkout；应验证来源提交、构建产物哈希和实际版本。
+- 推送前只暂存本任务文件。发布使用干净提交/产物，按原授权继续验证与默认分支同步；纯指令改动完成安装/发现验证，无需重启业务。
 
-6. Deploy only the services in scope.
-   - Avoid broad deploy scripts if they also modify unrelated services, Nginx sites, databases, or secrets outside scope.
-   - Prefer targeted build/restart commands for the named service.
-   - Validate public URLs or health endpoints after deployment.
+## 可恢复交接
 
-## Git Pull Repair Checklist
+遇到真实阻塞，记录：准确 cwd、HEAD、任务文件、失败命令及错误分类、已通过检查、仍缺的凭据/权限/输入，以及下一条安全步骤。不要保存秘密、会话原文或过期部署快照作为永久规则。
 
-Use when a server repo cannot pull.
-
-- Confirm whether the remote is SSH or HTTPS.
-- Test authentication from the same user that runs `git pull`.
-- If an SSH key exists but is not used, set repo-local config:
-  `git config core.sshCommand "ssh -i /path/to/key -o IdentitiesOnly=yes"`
-- If no key has repository access, ask the user to add the server public key as a GitHub Deploy Key or provide an approved credential flow.
-- After authentication works, run `git fetch origin <branch>`.
-- If files were manually copied into the repo and match remote HEAD, use a non-working-tree-destructive index alignment such as `git reset --mixed origin/<branch>`; avoid `git reset --hard` unless the user explicitly approves.
-- Finish by proving `git pull --ff-only origin <branch>` returns `Already up to date`.
-
-## Reporting
-
-Summarize:
-
-- Repos checked and their HEAD commits.
-- Whether each repo pulled cleanly.
-- Any dirty worktrees and who likely caused them.
-- Deployment state: running version, health checks, and public endpoint results.
-- Any blockers before edits.
+交付分别报告 implemented、tested、committed、pushed、installed/deployed、authenticated-E2E。HTTP 200 或构建成功不能代替登录后关键交互验证。

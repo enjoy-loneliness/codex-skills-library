@@ -29,19 +29,9 @@ codex-skills-library/
 
 ## 安装方式
 
-安装全部 skills：
+按任务安装需要的技能，不批量覆盖已安装目录。先对比现有 SKILL.md、scripts 与 references；有本地自定义时合并明确差异并保留备份，不运行无条件 cp -R 覆盖。
 
-```bash
-mkdir -p ~/.codex/skills
-cp -R skills/* ~/.codex/skills/
-```
-
-只安装某一个：
-
-```bash
-mkdir -p ~/.codex/skills
-cp -R skills/uniapp-project-builder ~/.codex/skills/
-```
+已有 Cloudflare/PDF 插件的用户无需再装同类副本。`collab-project-sync-audit` 提供只读仓库/运行时预检，`instruction-maintenance` 提供入口预算、已知失效规则及源/安装漂移检查。个人路径清单在安装后配置 `references/targets.json`；发布包不携带个人项目目录或会话内容。
 
 安装后重新打开 Codex 会话，让新的 skills 被发现。
 

@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-ai-agent
-description: Design agentized Auto Content Factory workflows. Use when decomposing the system into Collector, Scorer, Writer, Reviewer, Publisher, Reporter, Optimizer, defining agent responsibilities, inputs, internal reasoning steps, JSON outputs, handoff contracts, model replacement, prompt ownership, or multi-agent content automation architecture.
+description: 用于设计 ACF Collector、Writer、Reviewer 等代理的职责、输入输出及交接契约。
 ---
 
 # Auto Content Factory AI Agent

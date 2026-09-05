@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-project-structure
-description: Organize and enforce the Auto Content Factory repository structure. Use when creating files, refactoring folders, adding workflows, prompts, tests, logs, docs, assets, config, database schemas, scripts, services, README updates, documentation sync, one-workflow-per-file rules, or one-prompt-per-file rules.
+description: 用于 ACF 新文件归属、目录整理和结构调整，沿用已有约定。
 ---
 
 # Auto Content Factory Project Structure
@@ -66,7 +66,7 @@ Name files clearly with module and purpose, for example:
 - `prompts/topic_score.v1.md`
 - `prompts/article_generate_wechat.v1.md`
 
-## Output Requirements
+## Applicable Output
 
 When organizing project files, output:
 

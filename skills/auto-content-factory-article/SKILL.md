@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-article
-description: Write, evaluate, rewrite, and package WeChat Official Account articles for Auto Content Factory and 科技&Tools乐园. Use when generating practical Chinese articles about AI tools, automation tools, open-source projects, GitHub projects, productivity software, technical tutorials, ordinary-person money-making tools, n8n automation cases, cover prompts, tags, summaries, CTAs, SEO keywords, or publish suggestions.
+description: 用于撰写或改写 ACF 科技工具文章，生成有来源的标题、摘要和平台稿件。
 ---
 
 # Auto Content Factory Article

@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-review
-description: Review completed Auto Content Factory development work before delivery. Use after any module, workflow, prompt, schema, code, article pipeline, publisher, analytics job, test suite, or repository change to check architecture, workflows, prompts, database, naming, exceptions, logging, security, extensibility, cost, and compliance with all Auto Content Factory skills.
+description: 评审 ACF 改动的业务正确性与交付证据，只检查受影响流程和契约。
 ---
 
 # Auto Content Factory Review
@@ -39,9 +39,9 @@ Do not sacrifice long-term maintainability just to finish the task.
 
 Prefer a smaller complete, maintainable change over a larger fragile one.
 
-## Output Requirements
+## Applicable Output
 
-When reviewing, output:
+Report only the applicable findings and verification; this list is a menu, not a mandatory report template:
 
 1. Overall status: `pass`, `pass_with_notes`, or `blocked`.
 2. Critical blockers.

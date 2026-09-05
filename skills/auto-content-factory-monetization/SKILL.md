@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-monetization
-description: Evaluate and design monetization strategy for Auto Content Factory content. Use when judging whether an article, topic, workflow, tool review, automation case, or platform plan can drive WeChat growth, private-domain conversion, affiliate revenue, courses, consulting, software, tools, membership, ads, SEO, or long-term evergreen value.
+description: 用于评估 ACF 内容或业务方案的变现路径、投入和长期价值。
 ---
 
 # Auto Content Factory Monetization

@@ -1,0 +1,4 @@
+interface:
+  display_name: 指令与技能维护
+  short_description: 审计技能与项目指令的重复、漂移和阻塞，保留可验证边界与回归证据
+  default_prompt: 检查并维护已授权范围内的技能与项目指令，报告真实回归和未解决项。

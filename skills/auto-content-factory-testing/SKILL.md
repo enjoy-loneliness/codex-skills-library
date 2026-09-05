@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-testing
-description: Design and enforce tests for Auto Content Factory modules and workflows. Use when building or reviewing n8n workflows, services, scripts, prompts, database flows, article generation, publishing, analytics, dry-run support, mocks, replay testing, error cases, API failures, AI failures, timeout handling, JSON parsing, or launch readiness.
+description: 用于为 ACF 变更选择和实现相关回归、mock 或 replay 验证。
 ---
 
 # Auto Content Factory Testing
@@ -13,7 +13,7 @@ Any developed module must include tests before launch. Any workflow without test
 
 ## Required Test Cases
 
-For every module or workflow, generate tests for:
+Select tests for the actual behavior and failure modes changed; do not add irrelevant API/AI/JSON cases or tests that mirror implementation:
 
 - Normal data.
 - Empty data.
@@ -28,7 +28,7 @@ Add module-specific cases when needed, such as permission failure, missing Notio
 
 ## Workflow Test Modes
 
-Every workflow must support:
+Workflows that mutate state or call external services need appropriate safe validation modes:
 
 - Dry Run: execute logic without writing or publishing irreversible changes.
 - Mock: replace external APIs, AI calls, Notion writes, Telegram messages, and publishers with controlled fake responses.
@@ -48,7 +48,7 @@ Do not mark a workflow production-ready until:
 - Replay works for failures or captured examples.
 - Logs are checked for success and failure paths.
 
-## Output Requirements
+## Applicable Output
 
 When designing tests, output:
 

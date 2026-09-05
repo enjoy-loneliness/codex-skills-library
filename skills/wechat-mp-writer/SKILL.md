@@ -1,6 +1,6 @@
 ---
 name: wechat-mp-writer
-description: Use when planning, researching, drafting, rewriting, reviewing, or publishing WeChat Official Account articles for a technology and tools recommendation account. Applies to topic selection, tool info cards, original article drafting, non-plagiarizing transformation from online references, and n8n draft publishing workflows.
+description: 为科技工具类公众号做选题、资料核验、写作与稿件交接；真实发布需明确授权。
 metadata:
   short-description: Write original WeChat tech/tool articles
 ---

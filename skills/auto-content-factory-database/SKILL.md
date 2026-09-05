@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-database
-description: Design, review, and evolve the Auto Content Factory database schema. Use when creating Notion databases, defining fields, modeling data flow, separating Sources, Raw Articles, Topics, Drafts, Publish Queue, Published, Analytics, Prompt Library, Workflow Logs, AI Memory, planning future PostgreSQL, Supabase, MySQL, or SQLite migration, or enforcing database naming and lifecycle rules.
+description: 用于修改 ACF 数据模型、生命周期或迁移方案；普通查询不触发架构重设计。
 ---
 
 # Auto Content Factory Database

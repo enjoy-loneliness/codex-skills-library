@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-n8n
-description: Design, generate, review, and optimize modular n8n workflows for the Auto Content Factory automated publishing system. Use when creating n8n workflows for RSS or GitHub Trending collection, Notion storage, deduplication, AI topic scoring, WeChat article generation, Telegram review, publishing queues, analytics collection, workflow logs, error handling, or any n8n automation in the content factory.
+description: 用于创建或修改 ACF n8n 工作流、节点和交接契约。
 ---
 
 # Auto Content Factory n8n
@@ -51,7 +51,7 @@ Do not use vague names:
 - Untitled
 - Test
 
-## Required Output Format
+## Applicable Output
 
 When designing a workflow, output:
 

@@ -80,6 +80,8 @@ npx wrangler d1 execute trading-db-prod --remote --command "SELECT id, signal_ui
 curl -s "<TRADING_API_BASE_URL>/api/signalsData?channel_id=CHANNEL_ID&limit=20"
 ```
 
+For point/time-based return comparisons, read [point replay](references/point-replay.md).
+
 ## Lifecycle Semantics
 
 - `status_code=0`: pending / waiting entry.
@@ -94,7 +96,7 @@ curl -s "<TRADING_API_BASE_URL>/api/signalsData?channel_id=CHANNEL_ID&limit=20"
 
 ## Blogger Notes
 
-- WWG woods/john are snapshot-flow sources: existing positions are active, pending orders are pending, invalid/expired list is not automatically closed. For WWG, disappearance from the relevant snapshot list is a stronger close signal than merely moving into an invalid section. SL updates must not be treated as close.
+- WWG woods/john are snapshot-flow sources: existing positions are active, pending orders are pending, invalid/expired list is not automatically closed. For WWG, snapshot disappearance alone does not establish a stop-loss or actual exit; retain unresolved outcomes until lifecycle or execution evidence confirms them. Proxy exits must be labeled as theoretical scenarios. SL updates must not be treated as close.
 - Qiao messages can be compact Chinese orders and contextual replies. Resolve target/source channels
   from the private allowlist. Handle follow-ups like entry level changes, TP hit notices, and
   breakeven/cost-price exits by finding the latest matching active signal.

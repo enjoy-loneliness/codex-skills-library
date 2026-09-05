@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-topic-score
-description: Score and prioritize content topics for Auto Content Factory. Use when evaluating AI tools, automation ideas, GitHub projects, RSS items, trend candidates, WeChat article ideas, SEO opportunities, monetization potential, audience fit, difficulty, publishing priority, recommended titles, keywords, publish time, and target platforms.
+description: 用于按 ACF 受众、来源、实用价值和成本评估候选选题。
 ---
 
 # Auto Content Factory Topic Score

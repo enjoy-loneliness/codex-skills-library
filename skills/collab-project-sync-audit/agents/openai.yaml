@@ -1,4 +1,4 @@
 interface:
-  display_name: "Collab Sync Audit"
-  short_description: "Pre-change sync and deployment audit for shared repos"
-  default_prompt: "Use $collab-project-sync-audit before changing this shared project."
+  display_name: Collab Sync Audit
+  short_description: 用于共享仓库的开工同步、阻塞诊断和版本交付核对；定位当前任务文件，保留他人改动。
+  default_prompt: Use $collab-project-sync-audit before changing this shared project.

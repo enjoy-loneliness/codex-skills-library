@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-security
-description: Secure Auto Content Factory credentials, webhooks, logs, databases, and external requests. Use when handling API keys, tokens, cookies, webhook secrets, environment variables, hard-coded secrets, Git safety, Telegram or Notion credentials, log redaction, database token storage, webhook source verification, timeouts, retries, or error logging.
+description: 用于 ACF 凭据、外部输入、Webhook 和日志边界的实现或审查。
 ---
 
 # Auto Content Factory Security
@@ -68,7 +68,7 @@ Any external request must have:
 
 Retries must avoid infinite loops and should use bounded retry counts.
 
-## Output Requirements
+## Applicable Output
 
 When reviewing security, output:
 

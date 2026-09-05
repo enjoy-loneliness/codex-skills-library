@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-git
-description: Prepare Git commits and pull requests for Auto Content Factory. Use when creating commit messages, reviewing staged changes, writing PR descriptions, enforcing Conventional Commits, explaining why a change was made, documenting impact, summaries, tests, risks, and PR checklists.
+description: 用于 ACF 改动的提交、PR 和交付说明，仅纳入已验证的任务文件。
 ---
 
 # Auto Content Factory Git
@@ -85,7 +85,7 @@ Recommended PR template:
 - [ ] Workflow logs/errors considered when relevant
 ```
 
-## Output Requirements
+## Applicable Output
 
 When preparing Git output, provide:
 

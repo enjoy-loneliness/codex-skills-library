@@ -1,6 +1,6 @@
 ---
 name: auto-content-factory-workflow-logging
-description: Design and enforce append-only workflow logging for Auto Content Factory. Use when creating or reviewing n8n workflows, services, scripts, AI calls, API calls, retry behavior, error handling, Telegram exception notifications, cost tracking, token/model tracking, workflow logs, or production observability.
+description: 用于设计或修复 ACF 运行日志、失败诊断和成本可观测性。
 ---
 
 # Auto Content Factory Workflow Logging
@@ -79,7 +79,7 @@ Prefer:
 
 Use consistent status values across workflows so analytics can aggregate reliability.
 
-## Output Requirements
+## Applicable Output
 
 When designing logging for a workflow, output:
 
