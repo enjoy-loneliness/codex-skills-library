@@ -1,7 +1,7 @@
 interface:
-  display_name: "Auto Content Factory Monetization"
-  short_description: "Plan monetization paths for content"
-  default_prompt: "Use $auto-content-factory-monetization to evaluate monetization paths for a content idea."
-
+  display_name: 内容工厂变现评估
+  short_description: 用于评估 ACF 内容或业务方案的变现路径、投入和长期价值。
+  default_prompt: Use $auto-content-factory-monetization to evaluate monetization
+    paths for a content idea.
 policy:
   allow_implicit_invocation: true

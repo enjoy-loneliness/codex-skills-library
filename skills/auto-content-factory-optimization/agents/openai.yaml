@@ -1,7 +1,7 @@
 interface:
-  display_name: "Auto Content Factory Optimization"
-  short_description: "Reduce tokens calls scans and cost"
-  default_prompt: "Use $auto-content-factory-optimization to optimize an Auto Content Factory workflow for cost and efficiency."
-
+  display_name: 内容工厂成本优化
+  short_description: 用于诊断 ACF 的实际调用、成本或性能瓶颈并做针对性优化。
+  default_prompt: Use $auto-content-factory-optimization to optimize an Auto Content
+    Factory workflow for cost and efficiency.
 policy:
   allow_implicit_invocation: true

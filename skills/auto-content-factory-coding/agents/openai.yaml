@@ -1,7 +1,7 @@
 interface:
-  display_name: "Auto Content Factory Coding"
-  short_description: "Keep content factory code simple and safe"
-  default_prompt: "Use $auto-content-factory-coding to implement maintainable Auto Content Factory code."
-
+  display_name: 内容工厂代码实现
+  short_description: 用于实现或评审 ACF 服务、脚本及集成代码，保持已有模块职责。
+  default_prompt: Use $auto-content-factory-coding to implement maintainable Auto
+    Content Factory code.
 policy:
   allow_implicit_invocation: true

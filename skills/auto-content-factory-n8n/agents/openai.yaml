@@ -1,7 +1,7 @@
 interface:
-  display_name: "Auto Content Factory n8n"
-  short_description: "Generate modular n8n content workflows"
-  default_prompt: "Use $auto-content-factory-n8n to design a modular n8n workflow for the content factory."
-
+  display_name: 内容工厂 n8n 工作流
+  short_description: 用于创建或修改 ACF n8n 工作流、节点和交接契约。
+  default_prompt: Use $auto-content-factory-n8n to design a modular n8n workflow for
+    the content factory.
 policy:
   allow_implicit_invocation: true

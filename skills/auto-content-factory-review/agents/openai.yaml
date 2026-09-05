@@ -1,7 +1,7 @@
 interface:
-  display_name: "Auto Content Factory Review"
-  short_description: "Review delivery against all factory rules"
-  default_prompt: "Use $auto-content-factory-review to review an Auto Content Factory change before delivery."
-
+  display_name: 内容工厂交付审查
+  short_description: 评审 ACF 改动的业务正确性与交付证据，只检查受影响流程和契约。
+  default_prompt: Use $auto-content-factory-review to review an Auto Content Factory
+    change before delivery.
 policy:
   allow_implicit_invocation: true

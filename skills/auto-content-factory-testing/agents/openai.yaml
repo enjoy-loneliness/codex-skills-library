@@ -1,7 +1,7 @@
 interface:
-  display_name: "Auto Content Factory Testing"
-  short_description: "Require tests before workflow launch"
-  default_prompt: "Use $auto-content-factory-testing to design tests for an Auto Content Factory module or workflow."
-
+  display_name: 内容工厂回归测试
+  short_description: 用于为 ACF 变更选择和实现相关回归、mock 或 replay 验证。
+  default_prompt: Use $auto-content-factory-testing to design tests for an Auto Content
+    Factory module or workflow.
 policy:
   allow_implicit_invocation: true

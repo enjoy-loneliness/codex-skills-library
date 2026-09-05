@@ -1,7 +1,7 @@
 interface:
-  display_name: "Auto Content Factory AI Agent"
-  short_description: "Design single-purpose agent chains"
-  default_prompt: "Use $auto-content-factory-ai-agent to design an agentized Auto Content Factory workflow."
-
+  display_name: 内容工厂代理职责
+  short_description: 用于设计 ACF Collector、Writer、Reviewer 等代理的职责、输入输出及交接契约。
+  default_prompt: Use $auto-content-factory-ai-agent to design an agentized Auto Content
+    Factory workflow.
 policy:
   allow_implicit_invocation: true

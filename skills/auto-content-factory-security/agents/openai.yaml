@@ -1,7 +1,7 @@
 interface:
-  display_name: "Auto Content Factory Security"
-  short_description: "Protect keys webhooks logs and requests"
-  default_prompt: "Use $auto-content-factory-security to review secrets, webhooks, logs, and external requests."
-
+  display_name: 内容工厂安全边界
+  short_description: 用于 ACF 凭据、外部输入、Webhook 和日志边界的实现或审查。
+  default_prompt: Use $auto-content-factory-security to review secrets, webhooks,
+    logs, and external requests.
 policy:
   allow_implicit_invocation: true

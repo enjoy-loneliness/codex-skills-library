@@ -1,7 +1,7 @@
 interface:
-  display_name: "Auto Content Factory Database"
-  short_description: "Design Notion schemas for content factory"
-  default_prompt: "Use $auto-content-factory-database to design the Auto Content Factory database schema."
-
+  display_name: 内容工厂数据契约
+  short_description: 用于修改 ACF 数据模型、生命周期或迁移方案；普通查询不触发架构重设计。
+  default_prompt: Use $auto-content-factory-database to design the Auto Content Factory
+    database schema.
 policy:
   allow_implicit_invocation: true
