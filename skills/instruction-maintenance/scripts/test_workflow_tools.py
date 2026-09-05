@@ -2,7 +2,7 @@ import importlib.util,json,subprocess,tempfile,unittest
 from pathlib import Path
 
 def load(name):
- p=Path(__file__).parent/(name+'.py');spec=importlib.util.spec_from_file_location(name,p);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+ p=(Path(__file__).parents[2]/'collab-project-sync-audit/scripts/workflow_preflight.py') if name=='workflow_preflight' else Path(__file__).parent/(name+'.py');spec=importlib.util.spec_from_file_location(name,p);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
 preflight=load('workflow_preflight');health=load('instruction_health')
 
 class ToolsTests(unittest.TestCase):
