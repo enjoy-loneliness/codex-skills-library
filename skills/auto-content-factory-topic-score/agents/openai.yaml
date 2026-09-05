@@ -1,7 +1,6 @@
 interface:
-  display_name: 内容工厂选题评分
-  short_description: 用于按 ACF 受众、来源、实用价值和成本评估候选选题。
-  default_prompt: Use $auto-content-factory-topic-score to score a content topic for
-    publishing priority.
+  display_name: "内容工厂选题评分"
+  short_description: "用于按 ACF 受众、来源、实用价值和成本评估候选选题。"
+  default_prompt: "请使用 $auto-content-factory-topic-score 处理当前任务，沿用项目边界并验证实际结果。"
 policy:
   allow_implicit_invocation: true

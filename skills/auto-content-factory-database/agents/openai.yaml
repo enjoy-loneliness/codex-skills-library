@@ -1,7 +1,6 @@
 interface:
-  display_name: 内容工厂数据契约
-  short_description: 用于修改 ACF 数据模型、生命周期或迁移方案；普通查询不触发架构重设计。
-  default_prompt: Use $auto-content-factory-database to design the Auto Content Factory
-    database schema.
+  display_name: "内容工厂数据契约"
+  short_description: "用于修改 ACF 数据模型、生命周期或迁移方案；普通查询不触发架构重设计。"
+  default_prompt: "请使用 $auto-content-factory-database 处理当前任务，沿用项目边界并验证实际结果。"
 policy:
   allow_implicit_invocation: true

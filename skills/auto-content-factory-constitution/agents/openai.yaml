@@ -1,7 +1,6 @@
 interface:
-  display_name: 内容工厂工作原则
-  short_description: 用于判断 ACF 产品边界和跨模块决策；提供默认原则，不覆盖当前用户要求或现行 ADR。
-  default_prompt: Use $auto-content-factory-constitution as the highest-priority rules
-    for Auto Content Factory work.
+  display_name: "内容工厂工作原则"
+  short_description: "用于判断 ACF 产品边界和跨模块决策；提供默认原则，不覆盖当前用户要求或现行 ADR。"
+  default_prompt: "请使用 $auto-content-factory-constitution 处理当前任务，沿用项目边界并验证实际结果。"
 policy:
   allow_implicit_invocation: true

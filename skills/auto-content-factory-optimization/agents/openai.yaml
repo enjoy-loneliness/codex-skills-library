@@ -1,7 +1,6 @@
 interface:
-  display_name: 内容工厂成本优化
-  short_description: 用于诊断 ACF 的实际调用、成本或性能瓶颈并做针对性优化。
-  default_prompt: Use $auto-content-factory-optimization to optimize an Auto Content
-    Factory workflow for cost and efficiency.
+  display_name: "内容工厂成本优化"
+  short_description: "用于诊断 ACF 的实际调用、成本或性能瓶颈并做针对性优化。"
+  default_prompt: "请使用 $auto-content-factory-optimization 处理当前任务，沿用项目边界并验证实际结果。"
 policy:
   allow_implicit_invocation: true

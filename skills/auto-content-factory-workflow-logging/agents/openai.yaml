@@ -1,7 +1,6 @@
 interface:
-  display_name: 内容工厂运行日志
-  short_description: 用于设计或修复 ACF 运行日志、失败诊断和成本可观测性。
-  default_prompt: Use $auto-content-factory-workflow-logging to design logging for
-    an Auto Content Factory workflow.
+  display_name: "内容工厂运行日志"
+  short_description: "用于设计或修复 ACF 运行日志、失败诊断和成本可观测性。"
+  default_prompt: "请使用 $auto-content-factory-workflow-logging 处理当前任务，沿用项目边界并验证实际结果。"
 policy:
   allow_implicit_invocation: true

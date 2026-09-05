@@ -1,7 +1,6 @@
 interface:
-  display_name: 内容工厂发布交接
-  short_description: 用于 ACF 稿件的平台适配和已授权发布交接，保留实际发布边界。
-  default_prompt: Use $auto-content-factory-publish to plan platform-specific publishing
-    for a content draft.
+  display_name: "内容工厂发布交接"
+  short_description: "用于 ACF 稿件的平台适配和已授权发布交接，保留实际发布边界。"
+  default_prompt: "请使用 $auto-content-factory-publish 处理当前任务，沿用项目边界并验证实际结果。"
 policy:
   allow_implicit_invocation: true
